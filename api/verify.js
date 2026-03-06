@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   if (!reference) return res.status(400).json({ error: "Reference is required" });
 
   // SECRET KEY stored only in backend
-  const secretKey = "sk_test_XXXXXXXXXXXXXXXX"; // your Paystack secret key
+  const secretKey = "sk_live_d0930e16addbab2ca8a7944fb1f9b92758b997b2"; // your Paystack secret key
 
   try {
     const response = await fetch(`https://api.paystack.co/transaction/verify/${reference}`, {
