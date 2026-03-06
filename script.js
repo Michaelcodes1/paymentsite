@@ -1,5 +1,5 @@
 // Paystack Public Key (frontend safe)
-const publicKey = "pk_test_1b7b7d62f93e88e631734634a7990c26e5ae755e";
+const publicKey = "pk_live_39cf8f7f84e6e7c2a923f84b55885e42ee163edf";
 
 // Attach click event to the Pay Now button
 document.getElementById("payButton").addEventListener("click", payWithPaystack);
