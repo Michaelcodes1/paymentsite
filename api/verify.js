@@ -4,19 +4,14 @@ export default async function handler(req, res) {
   }
 
   const { reference } = req.body;
+  if (!reference) return res.status(400).json({ error: "Reference is required" });
 
-  if (!reference) {
-    return res.status(400).json({ error: "Reference is required" });
-  }
-
-  // Your Paystack Secret Key (store safely in Vercel env variables!)
-  const secretKey = process.env.PAYSTACK_SECRET_KEY;
+  // SECRET KEY stored only in backend
+  const secretKey = "sk_test_XXXXXXXXXXXXXXXX"; // your Paystack secret key
 
   try {
     const response = await fetch(`https://api.paystack.co/transaction/verify/${reference}`, {
-      headers: {
-        Authorization: `Bearer ${secretKey}`
-      }
+      headers: { Authorization: `Bearer ${secretKey}` }
     });
 
     const data = await response.json();
