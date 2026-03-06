@@ -1,8 +1,3 @@
-exports.handler = async function(event, context) {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: "Backend is working"
-    })
-  };
-};
+export default function handler(req, res) {
+  res.status(200).json({ message: "Backend working" });
+}
