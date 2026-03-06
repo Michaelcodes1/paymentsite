@@ -1,7 +1,5 @@
 function testBackend() {
-  alert("Button clicked");
-
-  fetch("/.netlify/functions/hello")
+  fetch("/api/hello")
     .then(res => res.json())
     .then(data => {
       alert(data.message);
