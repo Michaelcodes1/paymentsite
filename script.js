@@ -8,8 +8,8 @@ document.getElementById("payButton").addEventListener("click", payWithPaystack);
 function payWithPaystack() {
   let handler = PaystackPop.setup({
     key: publicKey,               // your public key
-    email: "customer@example.com",// replace with user email or input later
-    amount: 5000,                 // amount in kobo (₦50)
+    email: "orokoandco@gmail.com",// replace with user email or input later
+    amount: 120,000,                 // amount in kobo (₦50)
     currency: "NGN",
     ref: "" + Math.floor(Math.random() * 1000000000 + 1), // unique reference
     callback: function(response) {
