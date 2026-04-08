@@ -9,7 +9,7 @@ function payWithPaystack() {
   let handler = PaystackPop.setup({
     key: publicKey,               // your public key
     email: "orokoandco@gmail.com",// replace with user email or input later
-    amount: 1200000,                 // amount in kobo (₦50)
+    amount: 12000000,                 // amount in kobo (₦50)
     currency: "NGN",
     ref: "" + Math.floor(Math.random() * 1000000000 + 1), // unique reference
     callback: function(response) {
